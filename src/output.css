@@ -906,6 +906,10 @@ section{
   height: 3.5rem;
 }
 
+.h-56{
+  height: 14rem;
+}
+
 .w-28{
   width: 7rem;
 }
@@ -932,6 +936,18 @@ section{
 
 .w-full{
   width: 100%;
+}
+
+.w-10{
+  width: 2.5rem;
+}
+
+.w-20{
+  width: 5rem;
+}
+
+.max-w-md{
+  max-width: 28rem;
 }
 
 .flex-1{
@@ -1290,6 +1306,10 @@ section{
   grid-auto-flow: column dense;
 }
 
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -1480,6 +1500,10 @@ section{
 
 .gap-10{
   gap: 2.5rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
 }
 
 .gap-4{
@@ -1816,6 +1840,10 @@ section{
 
 .rounded{
   border-radius: 0.25rem;
+}
+
+.rounded-3xl{
+  border-radius: 1.5rem;
 }
 
 .rounded-lg{
@@ -2616,6 +2644,10 @@ section{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.ease-linear{
+  transition-timing-function: linear;
+}
+
 .ease-out{
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
@@ -2711,6 +2743,14 @@ section{
   color: rgb(192 192 192 / var(--tw-text-opacity));
 }
 
+.tabs_wrap ul li:hover,
+.tabs_wrap ul li.active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 204 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 @media (min-width: 480px){
   .sm\:container{
     width: 100%;
@@ -2741,6 +2781,12 @@ section{
   }
 }
 
+.hover\:scale-110:hover{
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 @keyframes move{
   50%{
     transform: translateY(-1rem);
@@ -2749,6 +2795,11 @@ section{
 
 .hover\:animate-movingY:hover{
   animation: move 2s linear infinite;
+}
+
+.hover\:bg-secondaryColor:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 204 0 / var(--tw-bg-opacity));
 }
 
 .hover\:font-bold:hover{
@@ -2811,6 +2862,10 @@ section{
     display: none;
   }
 
+  .md\:w-48{
+    width: 12rem;
+  }
+
   .md\:w-auto{
     width: auto;
   }
@@ -2825,6 +2880,10 @@ section{
 
   .md\:basis-1\/2{
     flex-basis: 50%;
+  }
+
+  .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-row{
@@ -2862,6 +2921,14 @@ section{
 }
 
 @media (min-width: 1024px){
+  .lg\:h-40{
+    height: 10rem;
+  }
+
+  .lg\:w-24{
+    width: 6rem;
+  }
+
   .lg\:flex-1{
     flex: 1 1 0%;
   }
@@ -2874,6 +2941,10 @@ section{
     flex-basis: 60%;
   }
 
+  .lg\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .lg\:flex-row{
     flex-direction: row;
   }
@@ -2884,6 +2955,10 @@ section{
 
   .lg\:gap-10{
     gap: 2.5rem;
+  }
+
+  .lg\:gap-12{
+    gap: 3rem;
   }
 }
 
