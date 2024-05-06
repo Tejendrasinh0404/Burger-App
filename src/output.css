@@ -461,6 +461,11 @@ body{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+body:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 section{
   padding-top: 4rem;
   padding-bottom: 1rem;
@@ -706,6 +711,10 @@ section{
   inset: -0.25rem;
 }
 
+.-bottom-1\/2{
+  bottom: -50%;
+}
+
 .-bottom-4{
   bottom: -1rem;
 }
@@ -736,10 +745,6 @@ section{
 
 .top-\[0\.7rem\]{
   top: 0.7rem;
-}
-
-.-bottom-1\/2{
-  bottom: -50%;
 }
 
 .isolate{
@@ -2957,6 +2962,21 @@ section{
   text-align: center;
 }
 
+.dark\:bg-darkColor:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-darkColorLight:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+}
+
+.dark\:hover\:bg-secondaryColor:hover:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 204 0 / var(--tw-bg-opacity));
+}
+
 @media (min-width: 480px){
   .sm\:underline{
     text-decoration-line: underline;
@@ -3092,12 +3112,8 @@ section{
   .lg\:gap-12{
     gap: 3rem;
   }
-}
 
-@media (prefers-color-scheme: dark){
-  @media (min-width: 1024px){
-    .dark\:lg\:hover\:\[paint-order\:markers\]:hover{
-      paint-order: markers;
-    }
+  .dark\:lg\:hover\:\[paint-order\:markers\]:hover:is(.dark *){
+    paint-order: markers;
   }
 }
